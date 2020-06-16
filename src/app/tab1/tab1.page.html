@@ -1,16 +1,27 @@
 
-<ion-header>
-  <ion-toolbar color="danger">
+<ion-header [translcent]="true">
+  <ion-toolbar color="dark">
     <ion-title>
-      Ionic QRScanner
+      Leitor :) 
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <div class="ion-padding">
-    <ion-button (click)="StartScanning()"expand="full" color="danger">
-      LER QRCODE
-    </ion-button>
 
-  </div>
+
+<ion-content [fullscreen]="true" color = "medium">
+ 
 </ion-content>
+
+<div class="screen">
+  <div class = "scan">
+    <img id="logo" src="assets\icon.png" alt="">
+  </div>
+</div>
+
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-button expand ="block" (click)="lerQRCode()">Ler QR Code</ion-button>
+  </ion-toolbar>
+</ion-footer>

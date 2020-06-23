@@ -1,5 +1,5 @@
 
-<ion-header [translcent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar color="dark">
     <ion-title>
       Leitor :) 
@@ -20,13 +20,13 @@
 
 
 <ion-footer class="ion-no-border">
-  <ion-iten *ngIf="link">
+  <ion-item *ngIf="link">
     <ion-label>
       <div>
         <a [href]="resultado" target="_blank">{{resultado}}</a>
       </div>
     </ion-label>
-  </ion-iten>
+  </ion-item>
   <ion-item *ngIf="resultado">
     <ion-label position="floating">Resultado: </ion-label>
     <ion-input [(ngModel)]="resultado"></ion-input>

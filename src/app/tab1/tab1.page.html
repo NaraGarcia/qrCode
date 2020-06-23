@@ -8,8 +8,7 @@
 </ion-header>
 
 
-<ion-content [fullscreen]="true" color = "medium">
- 
+<ion-content [fullscreen]="true" color = "medium">  
 </ion-content>
 
 <div class="screen">
@@ -21,6 +20,18 @@
 
 
 <ion-footer class="ion-no-border">
+  <ion-iten *ngIf="link">
+    <ion-label>
+      <div>
+        <a [href]="resultado" target="_blank">{{resultado}}</a>
+      </div>
+    </ion-label>
+  </ion-iten>
+  <ion-item *ngIf="resultado">
+    <ion-label position="floating">Resultado: </ion-label>
+    <ion-input [(ngModel)]="resultado"></ion-input>
+  </ion-item>
+
   <ion-toolbar color="dark">
     <ion-button expand ="block" (click)="lerQRCode()">Ler QR Code</ion-button>
   </ion-toolbar>

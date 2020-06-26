@@ -1,17 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="dark">
-    <ion-title>
-      Histórico
-    </ion-title>
+<ion-header [translucent]="true">  
+  <ion-toolbar color="medium">  
+    <ion-title><ion-icon name=planet-outline class="ionTitle"></ion-icon>Histórico de leitura<ion-icon name=planet-outline class="ionTitle"></ion-icon></ion-title>  
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Histórico</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="fundo" >
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
+
+  <ion-item-sliding  class="fundo" *ngFor="let historico of historicos" >
+    
+    <ion-item lines="full" color="light">
+     
+      <ion-label >
+        <div>
+          <p>
+            <ion-icon name=time class="ionData"></ion-icon>            {{historico.dataHora}} 
+          </p>
+          <p>
+            <ion-icon name=rocket class="ionQrCode"></ion-icon>{{historico.leitura}} 
+          </p>
+        </div>
+      </ion-label>
+    
+    </ion-item>
+  
+    <ion-item-options side="end">
+      <ion-item-option color="danger">
+        <ion-icon  slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+
+  </ion-item-sliding>
+
+
 </ion-content>

@@ -1,5 +1,6 @@
 export class Historico {  
 
-    leitura: string;
-    dataHora: string;
+    $key: string;    
+    resultado: string;
+    dataHora: Date;
 }

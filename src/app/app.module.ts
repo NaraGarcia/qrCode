@@ -12,10 +12,21 @@ import { Dialogs } from '@ionic-native/dialogs/ngx';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig), 
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

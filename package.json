@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~9.1.6",
     "@angular/core": "~9.1.6",
+    "@angular/fire": "^6.0.2",
     "@angular/forms": "~9.1.6",
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
@@ -32,6 +33,7 @@
     "cordova-plugin-qrscanner": "^3.0.1",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "es6-promise-plugin": "^4.2.2",
+    "firebase": "^7.15.5",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
